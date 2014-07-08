@@ -1,0 +1,157 @@
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Box Rounding
+@mixin rounded-all-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin rounded-corners($tl,$tr,$br,$bl) {
+  -moz-border-radius-topleft: $tl;
+  -moz-border-radius-topright: $tr;
+  -moz-border-radius-bottomright: $br;
+  -moz-border-radius-bottomleft: $bl;
+  -webkit-border-top-left-radius: $tl;
+  -webkit-border-top-right-radius: $tr;
+  -webkit-border-bottom-right-radius: $br;
+  -webkit-border-bottom-left-radius: $bl;
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+}
+
+
+//Gradient
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+
+// Shadows
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+
+// Tranparent background
+@mixin background-opacity($color, $opacity: 0.5) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
+
+// Hover states
+@mixin hoverColor() {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+
+
+// Background images
+@mixin background-opacity($color, $opacity: 0.7) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+@mixin cover-background($filename) {
+  background-image: url('../images/#{$filename}');
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-attachment:scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin svg-bg($path, $repeat: no-repeat, $position: 0 0) {
+  background-image: url('#{$path}.png'); // IE8 & below
+  background-image: none, url('#{$path}.svg');
+  background-repeat: $repeat;
+  background-position:$position; 
+}
+
+@mixin bg($path, $repeat: no-repeat, $position: 0 0) {
+  background-image: url('#{$path}.png'); // IE8 & below
+  background-repeat: $repeat;
+  background-position:$position; 
+}
+
+
+// Panel styles
+@mixin panel-ribbon($color){
+      background-color: $color;
+      display: block;
+      position: relative;
+      top: 15px;
+      left: 23px;
+      padding:10px 0px;
+      margin:0;
+      height: 52px;
+
+      &:before{
+        content: ' ';
+        position: absolute;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          line-height: 0;
+          border: 26px solid $color;
+          border-left: 26px solid transparent;
+          left: -52px;
+          top: 0;
+
+      }
+      &:after{
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 25px solid darken($color,10);
+        border-right: 24px solid transparent;
+        top: 52px;
+        right: 0;
+      }
+}
+
+@mixin panel-content($color){
+      padding:30px 20px 10px 20px;
+      border: 3px solid $color;
+      @include box-shadow(-7px, 7px, 0, darken($color,8));
+}
+
+@mixin download-colour($color, $amount: 15){
+  color:$color;
+    &:hover{
+      @include hoverColor();
+      color:darken($color,$amount);;
+    }
+}
