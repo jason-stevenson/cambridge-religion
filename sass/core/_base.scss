@@ -97,48 +97,18 @@
 
 	// Download button
 	// ================================================================================================
+
 	.download{
-		font-size: 4.5em;
-		float: left;
-		padding:0.1em;
-		@media #{$small} {
-			padding:0.3em;
-			font-size: 5.2em;		
+		text-align: center;
+		margin: 1em 0;
+		div{
+			font-size: 4.5em;
+			margin-bottom: 0.1em;
+		}
+		div + div{
+			font-size: 14px
 		}
 	}
-	// .download{
-	// 	@include clearfix();
-	// 	text-align:left;
-	// 	margin-bottom: 25px;
-
-	// 	@media #{$small} {
-	// 		text-align:center;
-	// 	}
-
-	// 	>a >span {
-	// 		font-size:emCalc(60px);
-	// 		float: left;
-
-	// 		@media #{$small} {
-	// 			float: none;
-	// 			font-size:emCalc(80px);
-	// 		}
-	// 	}
-	// 	>a >span + div{
-	// 		margin-top: 15px;
-	// 		margin-left: 10px;
-	// 		margin-bottom: 15px;
-	// 		font-size:emCalc(20px);
-	
-	// 		float: left;
-
-	// 		@media #{$small} {
-	// 			float: none;
-	// 			margin: 15px 0px 0px 0px;
-	// 			font-size:emCalc(20px);
-	// 		}
-	// 	}
-	// }
 
 
 
@@ -155,7 +125,6 @@
 			margin-bottom: 0;
 		}	
 	}
-
 
 	ul{
 		ul{

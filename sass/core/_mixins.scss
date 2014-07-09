@@ -107,41 +107,6 @@
 }
 
 
-// Panel styles
-@mixin panel-ribbon($color){
-      background-color: $color;
-      display: block;
-      position: relative;
-      top: 15px;
-      left: 23px;
-      padding:10px 0px;
-      margin:0;
-      height: 52px;
-
-      &:before{
-        content: ' ';
-        position: absolute;
-          display: inline-block;
-          width: 0;
-          height: 0;
-          line-height: 0;
-          border: 26px solid $color;
-          border-left: 26px solid transparent;
-          left: -52px;
-          top: 0;
-
-      }
-      &:after{
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: 25px solid darken($color,10);
-        border-right: 24px solid transparent;
-        top: 52px;
-        right: 0;
-      }
-}
 
 @mixin panel-content($color){
       padding:30px 20px 10px 20px;
@@ -149,10 +114,21 @@
       @include box-shadow(-7px, 7px, 0, darken($color,8));
 }
 
-@mixin download-colour($color, $amount: 15){
+@mixin hover-tint($color, $amount: 15){
   color:$color;
     &:hover{
       @include hoverColor();
       color:darken($color,$amount);;
     }
 }
+
+@mixin hover-colour($color){
+    &:hover{
+      @include hoverColor();
+      color:$color;
+    }
+}
+
+
+
+

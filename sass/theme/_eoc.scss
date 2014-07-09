@@ -3,12 +3,25 @@
 #epub{
 	
 
-	$colors-list: $chapter1, $chapter2;
+	$colors-list: $chapter1-colour;
+	$bg-colors-list: $chapter1-bgcolour;
+	$tint-colors-list: $chapter1-bgtint;
 	
 	@for $i from 1 through length($colors-list) {
     .eoc.chapter#{$i} {
-    	background-color:nth($colors-list, $i);
+    	background-color:nth($tint-colors-list, $i);
+	    	h2{background-color:nth($colors-list, $i)}
+			h4,h6{color:nth($colors-list, $i)}
+
+			h6{border-bottom:1px dotted nth($colors-list, $i);}
+			.activity{
+				border-top: 3px solid nth($colors-list, $i);
+			}
+			.content{
+				color: nth($colors-list, $i);
+			}
 		}
+		
 	}
 	
 
@@ -18,7 +31,79 @@
 
 		h2{
 			margin-top: 0;
+			margin-bottom: 0.5em;
+		}
+		h4{
+			margin-bottom: 0;
+		}
+		h6{
+			padding-bottom: 0.8em;
+		}
+		.download{
+			@include grid-column(12);
+			@media #{$small} {	
+				@include grid-column(2);
+			}
+			a{
+				color: $heading-blue;
+				@include hover-colour($red)
+			}
+		}
+		.content{
+			@include grid-column(12, false, false, false, false, false, false, false);
+			@media #{$small} {	
+				@include grid-column(10, false, false, 2, false, false, false, false);
+			}
+			
 
+
+
+			ol {
+			    counter-reset:li; /* Initiate a counter */
+			    margin-left:0; /* Remove the default left margin */
+			    padding-left:0; /* Remove the default left padding */
+			}
+			ol li {
+			    position:relative; /* Create a positioning context */
+			    margin:0 0 2px 2em; /* Give each list item a left margin to make room for the numbers */
+			    padding:4px 8px; /* Add some spacing around the content */
+			    list-style:none; /* Disable the normal item numbering */
+
+			}
+			ol > li:before {
+			    content:counter(li); /* Use the counter as content */
+			    counter-increment:li; /* Increment the counter by 1 */
+			    /* Position and style the number */
+			    position:absolute;
+			    top:6px;
+			    left:-2em;
+			    -moz-box-sizing:border-box;
+			    -webkit-box-sizing:border-box;
+			    box-sizing:border-box;
+			    width:1.6em;
+			    /* Some space between the number and the content in browsers that support
+			       generated content but not positioning it (Camino 2 is one example) */
+			    margin-right:8px;
+			    padding:0px;
+			   	background-color:darken($heading-blue,30);
+			   	font-size: 10px;
+			   	color: #fff;
+			   	@include rounded-all-corners(40px);
+			    text-align:center;
+			}
+
+			ol{
+				color: darken($heading-blue,30);
+				ol{
+					border:none;
+					li{
+						list-style-type:lower-alpha;
+					}
+					li:before{
+						content: "";
+					}
+				}
+			}
 		}
 	}
 }

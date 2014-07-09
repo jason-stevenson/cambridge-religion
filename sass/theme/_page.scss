@@ -1,16 +1,24 @@
 
 
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
 
 /* Page elements */
 
 #epub{
+
+	h2,h3,h4{
+		font-family: 'Oswald', sans-serif;
+	}
 
 	h2{
 		background-color: $heading-blue;
 		color: #fff;
 		padding: 0 0.5em;
 	}
-	
+	h4{
+		font-weight: 400;
+	}
 	h3{
 		color: $heading-blue;
 	}
@@ -24,8 +32,37 @@
 		background-size: 14px auto;
 		@include svg-bg("../images/ui/figure-arrow", no-repeat, 0 15px);
 	}
+	blockquote{
+		border:none;
+		color: #000;
+		p{color:#000;}
+	}
+	cite{
+		text-align: right;
+		color: #000;
+		&:before{
+			content: "";
+		}
+	}
 
 }
 
 
 
+/* Tooltips
+================================================ */
+$tooltip-padding: 1em;
+
+.has-tip{
+	color:$tooltip-color;
+	border:none;
+	&:hover{
+		color:darken($tooltip-color,30);
+	}
+}
+.tooltip{
+	padding: $tooltip-padding;
+	.nub{
+		border-color: transparent transparent #b1b1a6 transparent;
+	}
+}

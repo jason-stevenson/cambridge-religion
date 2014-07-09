@@ -27,6 +27,10 @@ $panel-padding: 1.5em;
 
 		h3{
 			color: $red;
+			span{
+				text-transform: uppercase;
+				font-weight: 300;
+			}
 		}
 		ul,ol,p{
 			color:darken($task-panel, 50);
@@ -61,6 +65,27 @@ $panel-padding: 1.5em;
 
 		h3{
 			color: darken($heading-blue,20);
+			span{
+				text-transform: uppercase;
+				font-weight: 300;
+			}
+		}
+
+		.download{
+			@include grid-column(12);
+			@media #{$small} {	
+				@include grid-column(2);
+			}
+			a{
+				color: $heading-blue;
+				@include hover-colour($red)
+			}
+		}
+		.info{
+			margin-top: 2em;
+			p{
+				margin-bottom: 0.5em;
+			}
 		}
 
 		table{

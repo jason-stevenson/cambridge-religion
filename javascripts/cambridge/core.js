@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 	// EOC
  	// ================================================================
-	$('.eoc').wrapInner('<div class="content"></div>');
+	$('.eoc').wrapInner('<div class="page-content"></div>');
 
 
 	// GLOBAL

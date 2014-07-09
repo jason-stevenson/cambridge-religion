@@ -4,9 +4,13 @@
 // ================================================
 
 // Chapter Colours
+$chapter1-colour:#366628;
 
-$chapter1:#bdce48;
-$chapter2:red;
+// Chapter Bg colours
+$chapter1-bgcolour:#b5cf41;
+
+// Chapter Bg tint
+$chapter1-bgtint:#dde7a2;
 
 
 // Common 
@@ -14,7 +18,14 @@ $grey: #666666;
 $red: #a2382f;
 $purple: #75386d;
 $heading-blue: #679fcd;
-$tooltiip-color: #253275;
+
+
+$tooltip-color: $red;
+$tooltip-bg: #d8d8d3;
+
+$tooltip-font-weight: normal;
+$tooltip-font-color: #000;
+$tooltip-radius: 0;
 
 
 // Panel colours
