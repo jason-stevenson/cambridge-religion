@@ -19,14 +19,12 @@
 			@include grid-column(12, false, false, false, false, false, false, false);
 	}
 
-	> div:first-child[data-type="test"] {
+	> div:first-child[data-type="eoc"] {
 		> div:first-child{
 			@include grid-row;
 			@include grid-column(12, false, false, false, false, false, false, false);
 		}
 	}
-
-
 
 
 	// Images
@@ -87,8 +85,7 @@
 			font-weight:bold;
 		}
 	}
-
-
+	
 
 
 	// Forms
@@ -96,8 +93,6 @@
 	textarea, input{
     	box-shadow: none;
 	}
-
-
 
 
 	// Download button
@@ -212,7 +207,11 @@
 
 	// iFrames
 	// ================================================================================================
-	iframe{margin-bottom: 1em;}
+	iframe{
+		width: 100%;
+		min-height: 400px;
+		margin-bottom: 1em;
+	}
 
 
 
@@ -236,10 +235,6 @@
 		.image-tile-3{@include block-grid(3, $block-grid-default-spacing)};
 		.image-tile-4{@include block-grid(4, $block-grid-default-spacing)};
 	}
-
-
-
-
 
 
 	/* Helpers
@@ -288,40 +283,44 @@
 			margin-right:50px; 
 		}
 	}
-
-
-	// .align-right{
-	// 	float: right;
-	// }
-
 }
 
 
 
+	/* Misc
+	================================================================================================ */
+	.caption{
+		font-size: 90%;
+		text-align: right;
+	}
 
-// Reveal lightbox overide
-// ================================================================================================
-// Provides the Zoom icon
-figure {
-	a[data-reveal-id]{
-		span{	
-			float: right;
-			position: relative;
-			top: -41px;
-			right: 0;
-			font-size: 1.6em;
-			padding:0.3em;
-			background-color: #000;
-			color: #fff;
+
+
+
+
+	/* Reveal lightbox overide
+	================================================================================================
+	Provides the Zoom icon */
+	figure {
+		a[data-reveal-id]{
+			span{	
+				float: right;
+				position: relative;
+				top: -41px;
+				right: 0;
+				font-size: 1.6em;
+				padding:0.3em;
+				background-color: #000;
+				color: #fff;
+			}
+		}
+		a:hover{
+			span{
+				background-color:#fff;
+				color: #000;
+			}
 		}
 	}
-	a:hover{
-		span{
-			background-color:#fff;
-			color: #000;
-		}
-	}
-}
 
 // Overide deault foundation behaviour. 
 // CamCore styles aren't applied as they are scoped to the #epub ID
@@ -336,7 +335,6 @@ figure {
 		line-height: 1.4em;
 		> strong{
 			font-weight:bold;
-			color: $grey;
 		}
 	}
 }

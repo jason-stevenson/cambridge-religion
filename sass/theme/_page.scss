@@ -5,97 +5,26 @@
 
 #epub{
 
-
-	// // Page headings 
-	// #book1{
-	// 	h2{
-	// 		background-color:$book1;
-	// 		color: #fff;
-	// 	}
-	// 	h3{
-	// 		color: $book1;
-	// 	}
-	// }
-	// #book2{
-	// 	h2{
-	// 		background-color:$book2;
-	// 		color: #fff;
-	// 	}
-	// 	h3{
-	// 		color: $book2;
-	// 	}
-	// }
-
-
-
-	// p,li{
-	// 	a{
-	// 	font-weight: bold;
-	// 	color: $grey;
-	// 		&:hover{
-	// 			text-decoration: underline;
-	// 		}
-	// 		&:active{
-	// 			text-decoration: none;
-	// 			color: #000;
-	// 		}
-	// 	}
-	// }
+	h2{
+		background-color: $heading-blue;
+		color: #fff;
+		padding: 0 0.5em;
+	}
 	
-	// // Headings
-	// h2{
-	// 	font-size: 1.8em;
-	// 	line-height:1.2em;
-	// 	padding:0.6em;
-	// }
-
-	// h4{
-	// 	color: $grey;
-	// 	font-weight: 400;
-	// 	font-size: 1.3em;
-	// }
-
-
-	// // Coloured bullets
-	// ol{
-	// 	li{
-	// 		color: $grey;
-	// 		font-weight: bold;
-	// 		> span{
-	// 			font-weight: normal;
-	// 			color: #000;
-	// 		}
-	// 	}
-	// }
-
-
-	// // Caption
-	// figcaption{
-	// 	strong{
-	// 		color: $grey;
-	// 	}
-	// }
-	// caption{
-	// 	strong{
-	// 		color: $grey;
-	// 	}
-	// }
-	// .caption{
-	// 		font-size: $base-font-size * 0.90;
-	// 	strong{
-	// 		color: $grey;
-	// 	}
-	// }
+	h3{
+		color: $heading-blue;
+	}
+	h5{
+		text-transform: uppercase;
+		font-weight: 400;
+	}
 	
+	figcaption{
+		padding-left: 25px;
+		background-size: 14px auto;
+		@include svg-bg("../images/ui/figure-arrow", no-repeat, 0 15px);
+	}
 
-	// .has-tip{
-	// 	background-color:lighten($tooltiip-color,50);
-	// 	padding:0.2em;
-	// 	@include rounded-all-corners(0.6em);
-	// 		&:hover{
-	// 			background-color:lighten($tooltiip-color,30);
-	// 		}
-	// }
 }
 
 

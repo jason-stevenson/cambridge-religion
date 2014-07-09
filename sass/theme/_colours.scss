@@ -3,74 +3,27 @@
 /* Define the colours to be used */
 // ================================================
 
-// Sectional 
-$book1: #982d79;
-$book2: #82a835;
+// Chapter Colours
 
-//Chapters - Book1 
-$book1-chapter1: #009280;
-$book1-chapter2: #a32041;
-$book1-chapter3: #2a86bb;
-$book1-chapter4: #9bc63c;
-$book1-chapter5: #663a58;
-$book1-chapter6: #757b38;
-$book1-chapter7: $book1-chapter1;
-$book1-chapter8: $book1-chapter2;
-$book1-chapter9: $book1-chapter3;
-$book1-chapter10: $book1-chapter4;
-$book1-chapter11: $book1-chapter5;
-$book1-chapter12: $book1-chapter6;
-
-$book1-chapter1-tint:#d9e9e2;
-$book1-chapter2-tint:#efd3cc;
-$book1-chapter3-tint:#dce6ef;
-$book1-chapter4-tint:#eff5d9;
-$book1-chapter5-tint:#dfd3d3;
-$book1-chapter6-tint:#e4e3cf;
-$book1-chapter7-tint:$book1-chapter1-tint;
-$book1-chapter8-tint:$book1-chapter2-tint;
-$book1-chapter9-tint:$book1-chapter3-tint;
-$book1-chapter10-tint:$book1-chapter4-tint;
-$book1-chapter11-tint:$book1-chapter5-tint;
-$book1-chapter12-tint:$book1-chapter6-tint;
-
-
-//Chapters - Book2
-$book2-chapter1: #a55261;
-$book2-chapter2: #757a38;
-$book2-chapter3: #663a58;
-$book2-chapter4: #cb532a;
-$book2-chapter5: $book2-chapter1;
-$book2-chapter6: $book2-chapter2;
-$book2-chapter7: $book2-chapter3;
-$book2-chapter8: $book2-chapter4;
-
-$book2-chapter1-tint:#eedcd8;
-$book2-chapter2-tint:#e4e3cf;
-$book2-chapter3-tint:#ded2d3;
-$book2-chapter4-tint:#f9ddc8;
-$book2-chapter5-tint:$book2-chapter1-tint;
-$book2-chapter6-tint:$book2-chapter2-tint;
-$book2-chapter7-tint:$book2-chapter3-tint;
-$book2-chapter8-tint:$book2-chapter4-tint;
-
-
-
+$chapter1:#bdce48;
+$chapter2:red;
 
 
 // Common 
 $grey: #666666;
-$purple: #961b81;
+$red: #a2382f;
+$purple: #75386d;
+$heading-blue: #679fcd;
 $tooltiip-color: #253275;
 
 
-//Panels
-$investigate-color:#fad58d;
-$collaborate-color:#572b79;
-$activity-color:#568c9d;
-$recipe-color:#fff9ec;
-$ingredient-color:#253276;
-$trivia-color:#30596b;
-$design-brief-color:#253275;
-$glossary-color:#253275;
-$solution-color:#31586b;
+// Panel colours
+$interactive-panel:#75386d;
+$activity-panel:#fffacb;
+$task-panel:#dce7ef;
+$extra-panel:#e0e8dc;
+
+
+// Tables
+$activity-table-head:#e6be33;
+$activity-table-cell:#f5e1a4;

@@ -81,6 +81,7 @@
     background: $color; /* The Fallback */
     background: rgba($color, $opacity);
 }
+
 @mixin cover-background($filename) {
   background-image: url('../images/#{$filename}');
   background-repeat: no-repeat;
@@ -99,8 +100,8 @@
   background-position:$position; 
 }
 
-@mixin bg($path, $repeat: no-repeat, $position: 0 0) {
-  background-image: url('#{$path}.png'); // IE8 & below
+@mixin img-bg($path, $repeat: no-repeat, $position: 0 0) {
+  background-image: url('#{$path}.png'); 
   background-repeat: $repeat;
   background-position:$position; 
 }
