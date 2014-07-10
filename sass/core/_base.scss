@@ -101,6 +101,7 @@
 	.download{
 		text-align: center;
 		margin: 1em 0;
+		z-index: 500;
 		div{
 			font-size: 4.5em;
 			margin-bottom: 0.1em;
@@ -137,6 +138,7 @@
 	}
 
 
+	// Ordered
 	ol{
 		ul{
 			li{
@@ -169,6 +171,36 @@
 			padding:0px 0px;
 			margin:5px 0px;
 		}
+	}
+
+
+	// Definition list
+	// 2 optional classes for setting the width of the first column.
+	dl{
+		margin:2em 0;
+	}
+	dt {
+		float: left;
+		display: block;
+	}
+	dd{
+		clear: both;
+	}
+	@media #{$small} {
+		dt {
+			float: left;
+			clear: left;
+			width: 125px;
+			text-align: left;
+			font-weight: bold;
+		}
+		dd {
+			margin: 0 0 0 0.5em;
+			padding: 0 0 0.5em 0;
+			clear:none;
+		}
+		dl.wide{dt{width:180px}}
+		dl.wider{dt{width:240px}}
 	}
 
 

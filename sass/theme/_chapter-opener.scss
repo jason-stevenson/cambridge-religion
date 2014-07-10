@@ -1,0 +1,93 @@
+
+
+
+/*  Chapter + Section covers 
+
+=========================================================================== */
+
+@mixin coverBackground($section, $filename) {
+  background-image: url('../images/covers/section#{$section}/chapter#{$filename}-cover.jpg');
+  background-repeat: no-repeat;
+  background-position:center top;
+  background-attachment:scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#epub{
+
+	/*	Assign backgrounds 
+	=========================================================================== 
+	
+	Using a custom mixin here allows us to pass the increment 
+   	variable through to generate the image path for the covers */
+
+	 @for $i from 1 through 12 {
+		#chapter-opener.section1.chapter#{$i} {
+			.cover-image{
+				@include coverBackground(1,$i);
+			}
+		}
+		#chapter-opener.section2.chapter#{$i} {
+			.cover-image{
+				@include coverBackground(2,$i);
+			}
+		}
+	}
+
+
+	/* 	Assign colours 
+	=========================================================================== */
+
+	$colors-list: $section1-colour, $section2-colour, $section3-colour, $section4-colour;
+	$bg-colors-list: $section1-bgcolour, $section2-bgcolour, $section3-bgcolour, $section4-bgcolour;
+
+	@for $i from 1 through length($colors-list) {
+		#chapter-opener.section#{$i} {
+			background-color: nth($colors-list, $i);
+			.chapter-title{
+				color: nth($bg-colors-list, $i)
+			}
+		}
+	}
+
+	#chapter-opener{
+		.masthead{
+			@include grid-row;
+			padding:1.2em 0;
+		}
+	}
+	
+
+	.chapter-number{
+		@include grid-column(12);
+		font-size: $h1-font-size;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: bold;
+		font-family: $title-font;
+		letter-spacing: 0.25em;
+		color: #fff;
+		margin-bottom: 10px;
+
+		@media #{$small} {
+			font-size: $h1-font-size * 1.8;	
+		}
+	}
+	.chapter-title{
+		@include grid-column(12);
+		font-size: $h4-font-size;
+		text-align: center;
+		padding: 0;
+		font-family: $title-font;
+		font-weight: bold;
+
+		@media #{$small} {
+			font-size: $h2-font-size;	
+		}
+	}
+
+}

@@ -7590,86 +7590,124 @@ a.th {
 #epub .download {
   text-align: center;
   margin: 1em 0;
+  z-index: 500;
 }
-/* line 104, ../sass/core/_base.scss */
+/* line 105, ../sass/core/_base.scss */
 #epub .download div {
   font-size: 4.5em;
   margin-bottom: 0.1em;
 }
-/* line 108, ../sass/core/_base.scss */
+/* line 109, ../sass/core/_base.scss */
 #epub .download div + div {
   font-size: 14px;
 }
-/* line 117, ../sass/core/_base.scss */
+/* line 118, ../sass/core/_base.scss */
 #epub ul, #epub ol {
   list-style-position: outside;
   margin-left: 20px;
 }
-/* line 121, ../sass/core/_base.scss */
+/* line 122, ../sass/core/_base.scss */
 #epub ul li, #epub ol li {
   margin-bottom: 0.4em;
 }
-/* line 124, ../sass/core/_base.scss */
+/* line 125, ../sass/core/_base.scss */
 #epub ul ul, #epub ul ol, #epub ol ul, #epub ol ol {
   margin-bottom: 0;
 }
-/* line 131, ../sass/core/_base.scss */
+/* line 132, ../sass/core/_base.scss */
 #epub ul ul li {
   list-style-type: none;
 }
-/* line 132, ../sass/core/_base.scss */
+/* line 133, ../sass/core/_base.scss */
 #epub ul ul li:before {
   content: "– ";
   margin-left: -20px;
 }
-/* line 142, ../sass/core/_base.scss */
+/* line 144, ../sass/core/_base.scss */
 #epub ol ul li {
   list-style-type: disc;
 }
-/* line 149, ../sass/core/_base.scss */
+/* line 151, ../sass/core/_base.scss */
 #epub ol.roman {
   list-style-position: outside;
 }
-/* line 151, ../sass/core/_base.scss */
+/* line 153, ../sass/core/_base.scss */
 #epub ol.roman li {
   list-style-type: lower-roman;
   padding: 0px 0px;
   margin: 5px 0px;
 }
-/* line 157, ../sass/core/_base.scss */
+/* line 159, ../sass/core/_base.scss */
 #epub ol.alpha-lower {
   list-style-position: outside;
 }
-/* line 159, ../sass/core/_base.scss */
+/* line 161, ../sass/core/_base.scss */
 #epub ol.alpha-lower li {
   list-style-type: lower-alpha;
   padding: 0px 0px;
   margin: 5px 0px;
 }
-/* line 165, ../sass/core/_base.scss */
+/* line 167, ../sass/core/_base.scss */
 #epub ol.alpha-upper {
   list-style-position: outside;
 }
-/* line 167, ../sass/core/_base.scss */
+/* line 169, ../sass/core/_base.scss */
 #epub ol.alpha-upper li {
   list-style-type: upper-alpha;
   padding: 0px 0px;
   margin: 5px 0px;
 }
 /* line 179, ../sass/core/_base.scss */
+#epub dl {
+  margin: 2em 0;
+}
+/* line 182, ../sass/core/_base.scss */
+#epub dt {
+  float: left;
+  display: block;
+}
+/* line 186, ../sass/core/_base.scss */
+#epub dd {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  /* line 190, ../sass/core/_base.scss */
+  #epub dt {
+    float: left;
+    clear: left;
+    width: 125px;
+    text-align: left;
+    font-weight: bold;
+  }
+  /* line 197, ../sass/core/_base.scss */
+  #epub dd {
+    margin: 0 0 0 0.5em;
+    padding: 0 0 0.5em 0;
+    clear: none;
+  }
+  /* line 202, ../sass/core/_base.scss */
+  #epub dl.wide dt {
+    width: 180px;
+  }
+  /* line 203, ../sass/core/_base.scss */
+  #epub dl.wider dt {
+    width: 240px;
+  }
+}
+/* line 211, ../sass/core/_base.scss */
 #epub iframe {
   width: 100%;
   min-height: 400px;
   margin-bottom: 1em;
 }
-/* line 192, ../sass/core/_base.scss */
+/* line 224, ../sass/core/_base.scss */
 #epub .image-tile-2 figure,
 #epub .image-tile-3 figure,
 #epub .image-tile-4 figure {
   width: 100%;
   margin: 0;
 }
-/* line 198, ../sass/core/_base.scss */
+/* line 230, ../sass/core/_base.scss */
 #epub .image-tile-2 {
   display: block;
   padding: 0;
@@ -7701,7 +7739,7 @@ a.th {
 #epub .image-tile-2 > li:nth-of-type(1n+1) {
   clear: both;
 }
-/* line 199, ../sass/core/_base.scss */
+/* line 231, ../sass/core/_base.scss */
 #epub .image-tile-3 {
   display: block;
   padding: 0;
@@ -7733,7 +7771,7 @@ a.th {
 #epub .image-tile-3 > li:nth-of-type(1n+1) {
   clear: both;
 }
-/* line 200, ../sass/core/_base.scss */
+/* line 232, ../sass/core/_base.scss */
 #epub .image-tile-4 {
   display: block;
   padding: 0;
@@ -7766,7 +7804,7 @@ a.th {
   clear: both;
 }
 @media only screen and (min-width: 768px) {
-  /* line 203, ../sass/core/_base.scss */
+  /* line 235, ../sass/core/_base.scss */
   #epub .image-tile-2 {
     display: block;
     padding: 0;
@@ -7798,7 +7836,7 @@ a.th {
   #epub .image-tile-2 > li:nth-of-type(2n+1) {
     clear: both;
   }
-  /* line 204, ../sass/core/_base.scss */
+  /* line 236, ../sass/core/_base.scss */
   #epub .image-tile-3 {
     display: block;
     padding: 0;
@@ -7830,7 +7868,7 @@ a.th {
   #epub .image-tile-3 > li:nth-of-type(3n+1) {
     clear: both;
   }
-  /* line 205, ../sass/core/_base.scss */
+  /* line 237, ../sass/core/_base.scss */
   #epub .image-tile-4 {
     display: block;
     padding: 0;
@@ -7863,65 +7901,65 @@ a.th {
     clear: both;
   }
 }
-/* line 211, ../sass/core/_base.scss */
+/* line 243, ../sass/core/_base.scss */
 #epub .inline {
   width: 50% !important;
   display: block;
 }
-/* line 215, ../sass/core/_base.scss */
+/* line 247, ../sass/core/_base.scss */
 #epub .float-left {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 215, ../sass/core/_base.scss */
+  /* line 247, ../sass/core/_base.scss */
   #epub .float-left {
     float: left;
     width: 40%;
     margin-right: 50px;
   }
 }
-/* line 223, ../sass/core/_base.scss */
+/* line 255, ../sass/core/_base.scss */
 #epub .float-right {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 223, ../sass/core/_base.scss */
+  /* line 255, ../sass/core/_base.scss */
   #epub .float-right {
     float: right;
     width: 40%;
     margin-left: 50px;
   }
 }
-/* line 231, ../sass/core/_base.scss */
+/* line 263, ../sass/core/_base.scss */
 #epub .float-center {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 231, ../sass/core/_base.scss */
+  /* line 263, ../sass/core/_base.scss */
   #epub .float-center {
     width: 70%;
     margin: 0 auto;
   }
 }
-/* line 239, ../sass/core/_base.scss */
+/* line 271, ../sass/core/_base.scss */
 #epub .float-right.small {
   width: 60%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  /* line 239, ../sass/core/_base.scss */
+  /* line 271, ../sass/core/_base.scss */
   #epub .float-right.small {
     width: 25%;
     margin-left: 50px;
   }
 }
-/* line 247, ../sass/core/_base.scss */
+/* line 279, ../sass/core/_base.scss */
 #epub .float-left.small {
   width: 60%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  /* line 247, ../sass/core/_base.scss */
+  /* line 279, ../sass/core/_base.scss */
   #epub .float-left.small {
     width: 25%;
     margin-right: 50px;
@@ -7930,7 +7968,7 @@ a.th {
 
 /* Misc
 ================================================================================================ */
-/* line 261, ../sass/core/_base.scss */
+/* line 293, ../sass/core/_base.scss */
 .caption {
   font-size: 90%;
   text-align: right;
@@ -7939,7 +7977,7 @@ a.th {
 /* Reveal lightbox overide
 ================================================================================================
 Provides the Zoom icon */
-/* line 275, ../sass/core/_base.scss */
+/* line 307, ../sass/core/_base.scss */
 figure a[data-reveal-id] span {
   float: right;
   position: relative;
@@ -7950,54 +7988,90 @@ figure a[data-reveal-id] span {
   background-color: #000;
   color: #fff;
 }
-/* line 287, ../sass/core/_base.scss */
+/* line 319, ../sass/core/_base.scss */
 figure a:hover span {
   background-color: #fff;
   color: #000;
 }
 
-/* line 299, ../sass/core/_base.scss */
+/* line 331, ../sass/core/_base.scss */
 .reveal-modal figure, .reveal-modal img {
   width: 100%;
 }
-/* line 300, ../sass/core/_base.scss */
+/* line 332, ../sass/core/_base.scss */
 .reveal-modal figcaption {
   padding: 15px 0 0 0;
   font-weight: normal;
   font-size: 90%;
   line-height: 1.4em;
 }
-/* line 305, ../sass/core/_base.scss */
+/* line 337, ../sass/core/_base.scss */
 .reveal-modal figcaption > strong {
   font-weight: bold;
 }
 
 /* Theme  */
 /* Page elements */
-/* line 10, ../sass/theme/_page.scss */
-#epub h2, #epub h3, #epub h4 {
-  font-family: 'Oswald', sans-serif;
-}
-/* line 14, ../sass/theme/_page.scss */
-#epub h2 {
-  background-color: #679fcd;
-  color: #fff;
-  padding: 0 0.5em;
+/* line 18, ../sass/theme/_page.scss */
+#epub .section1 h2 {
+  background-color: #005476;
 }
 /* line 19, ../sass/theme/_page.scss */
-#epub h4 {
-  font-weight: 400;
+#epub .section1 h3 {
+  color: #005476;
 }
-/* line 22, ../sass/theme/_page.scss */
-#epub h3 {
-  color: #679fcd;
+/* line 18, ../sass/theme/_page.scss */
+#epub .section2 h2 {
+  background-color: #963e1a;
+}
+/* line 19, ../sass/theme/_page.scss */
+#epub .section2 h3 {
+  color: #963e1a;
+}
+/* line 18, ../sass/theme/_page.scss */
+#epub .section3 h2 {
+  background-color: #1a471e;
+}
+/* line 19, ../sass/theme/_page.scss */
+#epub .section3 h3 {
+  color: #1a471e;
+}
+/* line 18, ../sass/theme/_page.scss */
+#epub .section4 h2 {
+  background-color: #7d1d42;
+}
+/* line 19, ../sass/theme/_page.scss */
+#epub .section4 h3 {
+  color: #7d1d42;
+}
+/* line 23, ../sass/theme/_page.scss */
+#epub a {
+  color: #a2382f;
 }
 /* line 25, ../sass/theme/_page.scss */
+#epub a:hover {
+  color: #67241e;
+}
+/* line 29, ../sass/theme/_page.scss */
+#epub h2, #epub h3, #epub h4 {
+  font-family: "Oswald", sans-serif;
+}
+/* line 33, ../sass/theme/_page.scss */
+#epub h2 {
+  color: #fff;
+  padding: 0 0.5em;
+  line-height: 1.6em;
+}
+/* line 38, ../sass/theme/_page.scss */
+#epub h4 {
+  font-weight: 700;
+}
+/* line 42, ../sass/theme/_page.scss */
 #epub h5 {
   text-transform: uppercase;
   font-weight: 400;
 }
-/* line 30, ../sass/theme/_page.scss */
+/* line 47, ../sass/theme/_page.scss */
 #epub figcaption {
   padding-left: 25px;
   background-size: 14px auto;
@@ -8006,42 +8080,100 @@ figure a:hover span {
   background-repeat: no-repeat;
   background-position: 0 15px;
 }
-/* line 35, ../sass/theme/_page.scss */
+/* line 52, ../sass/theme/_page.scss */
 #epub blockquote {
   border: none;
   color: #000;
 }
-/* line 38, ../sass/theme/_page.scss */
+/* line 55, ../sass/theme/_page.scss */
 #epub blockquote p {
   color: #000;
 }
-/* line 40, ../sass/theme/_page.scss */
+/* line 57, ../sass/theme/_page.scss */
 #epub cite {
   text-align: right;
   color: #000;
 }
-/* line 43, ../sass/theme/_page.scss */
+/* line 60, ../sass/theme/_page.scss */
 #epub cite:before {
   content: "";
+}
+/* line 65, ../sass/theme/_page.scss */
+#epub .table {
+  clear: both;
+}
+/* line 67, ../sass/theme/_page.scss */
+#epub .table h4 {
+  color: #a2382f;
+}
+/* line 71, ../sass/theme/_page.scss */
+#epub table tr th {
+  background-color: #a2382f;
+  color: #fff;
+  border-bottom: 5px solid #d4bbb0;
+  text-align: center;
+  line-height: 1.3em;
+  font-size: 0.95em;
+}
+/* line 79, ../sass/theme/_page.scss */
+#epub table tr td {
+  background-color: #f8dac3;
+  border-right: 5px solid #d4bbb0;
+}
+/* line 83, ../sass/theme/_page.scss */
+#epub table tr td:last-child {
+  border: none;
+}
+/* line 88, ../sass/theme/_page.scss */
+#epub sup, #epub sub {
+  padding-right: 8px;
+}
+/* line 93, ../sass/theme/_page.scss */
+#epub .psalm {
+  color: #273776;
+  margin: 1.9em 0;
+}
+/* line 96, ../sass/theme/_page.scss */
+#epub .psalm h5 {
+  text-transform: none;
+  color: #273776;
+  font-weight: bold;
+}
+/* line 101, ../sass/theme/_page.scss */
+#epub .psalm ul {
+  list-style-type: none;
+  margin: 0;
+}
+/* line 105, ../sass/theme/_page.scss */
+#epub .psalm li {
+  padding-bottom: 0.8em;
+}
+/* line 112, ../sass/theme/_page.scss */
+#epub .dialogue dt {
+  color: #376728;
+}
+/* line 115, ../sass/theme/_page.scss */
+#epub .dialogue dd {
+  color: #549e3d;
 }
 
 /* Tooltips
 ================================================ */
-/* line 56, ../sass/theme/_page.scss */
+/* line 161, ../sass/theme/_page.scss */
 .has-tip {
   color: #a2382f;
   border: none;
 }
-/* line 59, ../sass/theme/_page.scss */
+/* line 164, ../sass/theme/_page.scss */
 .has-tip:hover {
   color: #2b0f0d;
 }
 
-/* line 63, ../sass/theme/_page.scss */
+/* line 168, ../sass/theme/_page.scss */
 .tooltip {
   padding: 1em;
 }
-/* line 65, ../sass/theme/_page.scss */
+/* line 170, ../sass/theme/_page.scss */
 .tooltip .nub {
   border-color: transparent transparent #b1b1a6 transparent;
 }
@@ -8067,14 +8199,21 @@ figure a:hover span {
 }
 /* line 12, ../sass/theme/_panels.scss */
 #epub .interactive-panel h3 {
-  color: #75386d;
+  color: #75386d !important;
 }
 /* line 14, ../sass/theme/_panels.scss */
 #epub .interactive-panel h3 span {
   text-transform: uppercase;
   font-weight: 200;
 }
-/* line 23, ../sass/theme/_panels.scss */
+/* line 20, ../sass/theme/_panels.scss */
+#epub .interactive-panel.alternate {
+  clear: both;
+  border: none;
+  background-color: #fff;
+  padding: 0;
+}
+/* line 30, ../sass/theme/_panels.scss */
 #epub .task-panel {
   clear: both;
   border-style: solid;
@@ -8093,20 +8232,61 @@ figure a:hover span {
 #epub .task-panel > :last-child {
   margin-bottom: 0;
 }
-/* line 28, ../sass/theme/_panels.scss */
+/* line 35, ../sass/theme/_panels.scss */
 #epub .task-panel h3 {
-  color: #a2382f;
+  color: #a2382f !important;
 }
-/* line 30, ../sass/theme/_panels.scss */
+/* line 37, ../sass/theme/_panels.scss */
 #epub .task-panel h3 span {
   text-transform: uppercase;
   font-weight: 300;
 }
-/* line 35, ../sass/theme/_panels.scss */
+/* line 42, ../sass/theme/_panels.scss */
 #epub .task-panel ul, #epub .task-panel ol, #epub .task-panel p {
   color: #406c8c;
 }
-/* line 45, ../sass/theme/_panels.scss */
+/* line 46, ../sass/theme/_panels.scss */
+#epub .task-panel .info > p {
+  color: #000 !important;
+  margin: 0;
+  padding-top: 1.4em;
+}
+/* line 51, ../sass/theme/_panels.scss */
+#epub .task-panel .content {
+  clear: both;
+}
+/* line 54, ../sass/theme/_panels.scss */
+#epub .task-panel .download {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  /* line 54, ../sass/theme/_panels.scss */
+  #epub .task-panel .download {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 16.66667%;
+    float: left;
+  }
+}
+/* line 59, ../sass/theme/_panels.scss */
+#epub .task-panel .download a {
+  color: #679fcd;
+}
+/* line 126, ../sass/core/_mixins.scss */
+#epub .task-panel .download a:hover {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  color: #a2382f;
+}
+/* line 72, ../sass/theme/_panels.scss */
 #epub .extra-panel {
   clear: both;
   border-style: solid;
@@ -8125,15 +8305,15 @@ figure a:hover span {
 #epub .extra-panel > :last-child {
   margin-bottom: 0;
 }
-/* line 49, ../sass/theme/_panels.scss */
+/* line 76, ../sass/theme/_panels.scss */
 #epub .extra-panel h3 {
-  color: #75386d;
+  color: #75386d !important;
 }
-/* line 52, ../sass/theme/_panels.scss */
+/* line 79, ../sass/theme/_panels.scss */
 #epub .extra-panel ul, #epub .extra-panel ol {
   color: #44583a;
 }
-/* line 61, ../sass/theme/_panels.scss */
+/* line 88, ../sass/theme/_panels.scss */
 #epub .activity-panel {
   clear: both;
   border-style: solid;
@@ -8153,16 +8333,16 @@ figure a:hover span {
 #epub .activity-panel > :last-child {
   margin-bottom: 0;
 }
-/* line 66, ../sass/theme/_panels.scss */
+/* line 93, ../sass/theme/_panels.scss */
 #epub .activity-panel h3 {
-  color: #336c9b;
+  color: #336c9b !important;
 }
-/* line 68, ../sass/theme/_panels.scss */
+/* line 95, ../sass/theme/_panels.scss */
 #epub .activity-panel h3 span {
   text-transform: uppercase;
   font-weight: 300;
 }
-/* line 74, ../sass/theme/_panels.scss */
+/* line 101, ../sass/theme/_panels.scss */
 #epub .activity-panel .download {
   position: relative;
   padding-left: 0.9375em;
@@ -8171,7 +8351,7 @@ figure a:hover span {
   float: left;
 }
 @media only screen and (min-width: 768px) {
-  /* line 74, ../sass/theme/_panels.scss */
+  /* line 101, ../sass/theme/_panels.scss */
   #epub .activity-panel .download {
     position: relative;
     padding-left: 0.9375em;
@@ -8180,7 +8360,7 @@ figure a:hover span {
     float: left;
   }
 }
-/* line 79, ../sass/theme/_panels.scss */
+/* line 106, ../sass/theme/_panels.scss */
 #epub .activity-panel .download a {
   color: #679fcd;
 }
@@ -8193,105 +8373,177 @@ figure a:hover span {
   transition: all 0.4s ease-in-out 0s;
   color: #a2382f;
 }
-/* line 84, ../sass/theme/_panels.scss */
+/* line 111, ../sass/theme/_panels.scss */
 #epub .activity-panel .info {
   margin-top: 2em;
 }
-/* line 86, ../sass/theme/_panels.scss */
+/* line 113, ../sass/theme/_panels.scss */
 #epub .activity-panel .info p {
   margin-bottom: 0.5em;
 }
-/* line 91, ../sass/theme/_panels.scss */
+/* line 118, ../sass/theme/_panels.scss */
 #epub .activity-panel table {
   border: none;
   /* Remove cell divider on last element */
   /* Row striping */
 }
-/* line 93, ../sass/theme/_panels.scss */
+/* line 120, ../sass/theme/_panels.scss */
 #epub .activity-panel table img {
   max-width: 80%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 93, ../sass/theme/_panels.scss */
+  /* line 120, ../sass/theme/_panels.scss */
   #epub .activity-panel table img {
     max-width: 50%;
   }
 }
-/* line 99, ../sass/theme/_panels.scss */
+/* line 126, ../sass/theme/_panels.scss */
 #epub .activity-panel table th {
   font-size: 95%;
   background-color: #e6be33;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
-/* line 105, ../sass/theme/_panels.scss */
+/* line 132, ../sass/theme/_panels.scss */
 #epub .activity-panel table td {
   background-color: #f5e1a4;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
-/* line 113, ../sass/theme/_panels.scss */
+/* line 140, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr > th:last-child,
 #epub .activity-panel table tr > td:last-child {
   border-right: none;
 }
-/* line 116, ../sass/theme/_panels.scss */
+/* line 143, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr:last-child td {
   border-bottom: none;
 }
-/* line 122, ../sass/theme/_panels.scss */
+/* line 149, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr:nth-of-type(even) td {
   background-color: #f8e9bb;
 }
-/* line 126, ../sass/theme/_panels.scss */
+/* line 153, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr > td:first-child {
   text-align: center;
 }
-/* line 133, ../sass/theme/_panels.scss */
+/* line 160, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate {
   /* Row striping */
 }
-/* line 134, ../sass/theme/_panels.scss */
+/* line 161, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate td {
   background-color: #f8e9bb;
 }
-/* line 139, ../sass/theme/_panels.scss */
+/* line 166, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate tr:nth-of-type(odd) td {
   background-color: #fff;
   border-right: 2px solid #f8e9bb;
 }
-/* line 142, ../sass/theme/_panels.scss */
+/* line 169, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate tr:nth-of-type(odd) td:last-child {
   border: none;
 }
-/* line 147, ../sass/theme/_panels.scss */
+/* line 174, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate tr > td:first-child {
   text-align: center;
 }
 
 /* line 11, ../sass/theme/_eoc.scss */
-#epub .eoc.chapter1 {
-  background-color: #dde7a2;
+#epub .eoc.section1 {
+  background-color: #d9e5ea;
 }
 /* line 13, ../sass/theme/_eoc.scss */
-#epub .eoc.chapter1 h2 {
-  background-color: #366628;
+#epub .eoc.section1 h2 {
+  background-color: #005476;
 }
 /* line 14, ../sass/theme/_eoc.scss */
-#epub .eoc.chapter1 h4, #epub .eoc.chapter1 h6 {
-  color: #366628;
+#epub .eoc.section1 h4, #epub .eoc.section1 h6 {
+  color: #005476;
 }
 /* line 16, ../sass/theme/_eoc.scss */
-#epub .eoc.chapter1 h6 {
-  border-bottom: 1px dotted #366628;
+#epub .eoc.section1 h6 {
+  border-bottom: 1px dotted #005476;
 }
 /* line 17, ../sass/theme/_eoc.scss */
-#epub .eoc.chapter1 .activity {
-  border-top: 3px solid #366628;
+#epub .eoc.section1 .activity {
+  border-top: 3px solid #005476;
 }
 /* line 20, ../sass/theme/_eoc.scss */
-#epub .eoc.chapter1 .content {
-  color: #366628;
+#epub .eoc.section1 .content {
+  color: #005476;
+}
+/* line 11, ../sass/theme/_eoc.scss */
+#epub .eoc.section2 {
+  background-color: #dfc3b7;
+}
+/* line 13, ../sass/theme/_eoc.scss */
+#epub .eoc.section2 h2 {
+  background-color: #963e1a;
+}
+/* line 14, ../sass/theme/_eoc.scss */
+#epub .eoc.section2 h4, #epub .eoc.section2 h6 {
+  color: #963e1a;
+}
+/* line 16, ../sass/theme/_eoc.scss */
+#epub .eoc.section2 h6 {
+  border-bottom: 1px dotted #963e1a;
+}
+/* line 17, ../sass/theme/_eoc.scss */
+#epub .eoc.section2 .activity {
+  border-top: 3px solid #963e1a;
+}
+/* line 20, ../sass/theme/_eoc.scss */
+#epub .eoc.section2 .content {
+  color: #963e1a;
+}
+/* line 11, ../sass/theme/_eoc.scss */
+#epub .eoc.section3 {
+  background-color: #dde6a2;
+}
+/* line 13, ../sass/theme/_eoc.scss */
+#epub .eoc.section3 h2 {
+  background-color: #1a471e;
+}
+/* line 14, ../sass/theme/_eoc.scss */
+#epub .eoc.section3 h4, #epub .eoc.section3 h6 {
+  color: #1a471e;
+}
+/* line 16, ../sass/theme/_eoc.scss */
+#epub .eoc.section3 h6 {
+  border-bottom: 1px dotted #1a471e;
+}
+/* line 17, ../sass/theme/_eoc.scss */
+#epub .eoc.section3 .activity {
+  border-top: 3px solid #1a471e;
+}
+/* line 20, ../sass/theme/_eoc.scss */
+#epub .eoc.section3 .content {
+  color: #1a471e;
+}
+/* line 11, ../sass/theme/_eoc.scss */
+#epub .eoc.section4 {
+  background-color: #e7c4d2;
+}
+/* line 13, ../sass/theme/_eoc.scss */
+#epub .eoc.section4 h2 {
+  background-color: #7d1d42;
+}
+/* line 14, ../sass/theme/_eoc.scss */
+#epub .eoc.section4 h4, #epub .eoc.section4 h6 {
+  color: #7d1d42;
+}
+/* line 16, ../sass/theme/_eoc.scss */
+#epub .eoc.section4 h6 {
+  border-bottom: 1px dotted #7d1d42;
+}
+/* line 17, ../sass/theme/_eoc.scss */
+#epub .eoc.section4 .activity {
+  border-top: 3px solid #7d1d42;
+}
+/* line 20, ../sass/theme/_eoc.scss */
+#epub .eoc.section4 .content {
+  color: #7d1d42;
 }
 /* line 29, ../sass/theme/_eoc.scss */
 #epub .eoc {
@@ -8341,7 +8593,7 @@ figure a:hover span {
   transition: all 0.4s ease-in-out 0s;
   color: #a2382f;
 }
-/* line 52, ../sass/theme/_eoc.scss */
+/* line 53, ../sass/theme/_eoc.scss */
 #epub .eoc .content {
   position: relative;
   padding-left: 0.9375em;
@@ -8349,7 +8601,7 @@ figure a:hover span {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 52, ../sass/theme/_eoc.scss */
+  /* line 53, ../sass/theme/_eoc.scss */
   #epub .eoc .content {
     position: relative;
     padding-left: 0.9375em;
@@ -8358,7 +8610,7 @@ figure a:hover span {
     margin-left: 16.66667%;
   }
 }
-/* line 61, ../sass/theme/_eoc.scss */
+/* line 62, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol {
   counter-reset: li;
   /* Initiate a counter */
@@ -8367,7 +8619,7 @@ figure a:hover span {
   padding-left: 0;
   /* Remove the default left padding */
 }
-/* line 66, ../sass/theme/_eoc.scss */
+/* line 67, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol li {
   position: relative;
   /* Create a positioning context */
@@ -8378,7 +8630,7 @@ figure a:hover span {
   list-style: none;
   /* Disable the normal item numbering */
 }
-/* line 73, ../sass/theme/_eoc.scss */
+/* line 74, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol > li:before {
   content: counter(li);
   /* Use the counter as content */
@@ -8404,19 +8656,871 @@ figure a:hover span {
   -webkit-border-radius: 40px;
   text-align: center;
 }
-/* line 95, ../sass/theme/_eoc.scss */
+/* line 96, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol {
   color: #265175;
 }
-/* line 97, ../sass/theme/_eoc.scss */
+/* line 98, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol ol {
   border: none;
 }
-/* line 99, ../sass/theme/_eoc.scss */
+/* line 100, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol ol li {
   list-style-type: lower-alpha;
 }
-/* line 102, ../sass/theme/_eoc.scss */
+/* line 103, ../sass/theme/_eoc.scss */
 #epub .eoc .content ol ol li:before {
   content: "";
+}
+
+/*  Chapter + Section covers 
+
+=========================================================================== */
+/* line 20, ../sass/theme/_chapter-opener.scss */
+#epub {
+  	/*	Assign backgrounds 
+  	=========================================================================== 
+  	
+  	Using a custom mixin here allows us to pass the increment 
+     	variable through to generate the image path for the covers */
+  /* 	Assign colours 
+  =========================================================================== */
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter1 .cover-image {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter1 .cover-image {
+  background-image: url("../images/covers/section2/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter2 .cover-image {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter2 .cover-image {
+  background-image: url("../images/covers/section2/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter3 .cover-image {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter3 .cover-image {
+  background-image: url("../images/covers/section2/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter4 .cover-image {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter4 .cover-image {
+  background-image: url("../images/covers/section2/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter5 .cover-image {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter5 .cover-image {
+  background-image: url("../images/covers/section2/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter6 .cover-image {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter6 .cover-image {
+  background-image: url("../images/covers/section2/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter7 .cover-image {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter7 .cover-image {
+  background-image: url("../images/covers/section2/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter8 .cover-image {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter8 .cover-image {
+  background-image: url("../images/covers/section2/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter9 .cover-image {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter9 .cover-image {
+  background-image: url("../images/covers/section2/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter10 .cover-image {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter10 .cover-image {
+  background-image: url("../images/covers/section2/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter11 .cover-image {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter11 .cover-image {
+  background-image: url("../images/covers/section2/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1.chapter12 .cover-image {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter12 .cover-image {
+  background-image: url("../images/covers/section2/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 49, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1 {
+  background-color: #3ba1cd;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section1 .chapter-title {
+  color: #005476;
+}
+/* line 49, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2 {
+  background-color: #db6738;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2 .chapter-title {
+  color: #963e1a;
+}
+/* line 49, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3 {
+  background-color: #b6d141;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3 .chapter-title {
+  color: #1a471e;
+}
+/* line 49, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4 {
+  background-color: #da2a6f;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4 .chapter-title {
+  color: #7d1d42;
+}
+/* line 58, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener .masthead {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  padding: 1.2em 0;
+}
+/* line 3, ../sass/core/_mixins.scss */
+#epub #chapter-opener .masthead:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 65, ../sass/theme/_chapter-opener.scss */
+#epub .chapter-number {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+  font-size: 2.75em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.25em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 65, ../sass/theme/_chapter-opener.scss */
+  #epub .chapter-number {
+    font-size: 4.95em;
+  }
+}
+/* line 80, ../sass/theme/_chapter-opener.scss */
+#epub .chapter-title {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+  font-size: 1.4375em;
+  text-align: center;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  /* line 80, ../sass/theme/_chapter-opener.scss */
+  #epub .chapter-title {
+    font-size: 2.3125em;
+  }
+}
+
+/*  Chapter + Section covers 
+
+=========================================================================== */
+/* line 20, ../sass/theme/_strand-opener.scss */
+#epub {
+  	/*	Assign backgrounds 
+  	=========================================================================== 
+  	
+  	Using a custom mixin here allows us to pass the increment 
+     	variable through to generate the image path for the covers */
+  /* 	Assign colours 
+  =========================================================================== */
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter1 .masthead {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter1 .masthead {
+  background-image: url("../images/covers/section2/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter2 .masthead {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter2 .masthead {
+  background-image: url("../images/covers/section2/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter3 .masthead {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter3 .masthead {
+  background-image: url("../images/covers/section2/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter4 .masthead {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter4 .masthead {
+  background-image: url("../images/covers/section2/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter5 .masthead {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter5 .masthead {
+  background-image: url("../images/covers/section2/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter6 .masthead {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter6 .masthead {
+  background-image: url("../images/covers/section2/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter7 .masthead {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter7 .masthead {
+  background-image: url("../images/covers/section2/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter8 .masthead {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter8 .masthead {
+  background-image: url("../images/covers/section2/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter9 .masthead {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter9 .masthead {
+  background-image: url("../images/covers/section2/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter10 .masthead {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter10 .masthead {
+  background-image: url("../images/covers/section2/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter11 .masthead {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter11 .masthead {
+  background-image: url("../images/covers/section2/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1.chapter12 .masthead {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 35, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter12 .masthead {
+  background-image: url("../images/covers/section2/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 49, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1 {
+  background-color: #3ba1cd;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section1 .strand-title {
+  color: #005476;
+}
+/* line 49, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2 {
+  background-color: #db6738;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2 .strand-title {
+  color: #963e1a;
+}
+/* line 49, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3 {
+  background-color: #b6d141;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3 .strand-title {
+  color: #1a471e;
+}
+/* line 49, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4 {
+  background-color: #da2a6f;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4 .strand-title {
+  color: #7d1d42;
+}
+/* line 58, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener .masthead {
+  padding: 1.2em 0;
+  min-height: 200px;
+  margin-bottom: 2em;
+}
+@media only screen and (min-width: 768px) {
+  /* line 58, ../sass/theme/_strand-opener.scss */
+  #epub #strand-opener .masthead {
+    min-height: 300px;
+  }
+}
+/* line 66, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener .content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  padding: 0 2em;
+}
+/* line 3, ../sass/core/_mixins.scss */
+#epub #strand-opener .content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 70, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener .content ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 74, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener .content ul li {
+  position: relative;
+  margin: 0 0 2px 2em;
+  padding: 4px 8px;
+  list-style: none;
+}
+/* line 81, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener .content ul > li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+  /* Position and style the number */
+  position: absolute;
+  top: 10px;
+  left: -12px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  padding: 0px;
+  background-color: #000;
+  font-size: 8px;
+  color: #000;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  text-align: center;
+}
+/* line 106, ../sass/theme/_strand-opener.scss */
+#epub .strand-number {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+  font-size: 2.75em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.10em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 106, ../sass/theme/_strand-opener.scss */
+  #epub .strand-number {
+    font-size: 7.15em;
+  }
+}
+/* line 121, ../sass/theme/_strand-opener.scss */
+#epub .strand-title {
+  font-size: 2.75em;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  margin: 0.4em 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 121, ../sass/theme/_strand-opener.scss */
+  #epub .strand-title {
+    font-size: 2.75em;
+  }
+}
+
+/* line 5, ../sass/theme/_toc.scss */
+#epub #toc h2 {
+  background-color: #fff;
+  font-weight: 200;
+  padding: 0.6em 0;
+  color: #3ba1cd;
+  font-size: 2em;
+}
+/* line 12, ../sass/theme/_toc.scss */
+#epub #toc h3 {
+  margin: 0.7em 0 0.9em 0;
+  color: #3ba1cd;
+  font-size: 1.4375em;
+  line-height: 0.8em;
+  font-weight: bold;
+}
+/* line 19, ../sass/theme/_toc.scss */
+#epub #toc ul {
+  list-style-type: none;
+  margin: 0;
+}
+/* line 22, ../sass/theme/_toc.scss */
+#epub #toc ul li {
+  margin: 0;
+}
+/* line 26, ../sass/theme/_toc.scss */
+#epub #toc .index {
+  margin-top: 1em;
+}
+/* line 28, ../sass/theme/_toc.scss */
+#epub #toc .index li {
+  margin: 0.9em 0 0.8em 0;
+  color: #3ba1cd;
+  font-size: 1.4375em;
+  line-height: 0.8em;
+  font-family: "Oswald", sans-serif;
+}
+
+/* line 5, ../sass/theme/_resources.scss */
+#epub #resources h2 {
+  background-color: #fff;
+  font-weight: 200;
+  padding: 0.6em 0;
+  color: #3ba1cd;
+}
+/* line 12, ../sass/theme/_resources.scss */
+#epub #resources ul {
+  list-style-type: none;
+  margin: 0;
+}
+/* line 16, ../sass/theme/_resources.scss */
+#epub #resources ul li {
+  margin: 0;
+}
+/* line 19, ../sass/theme/_resources.scss */
+#epub #resources ul li:before {
+  content: " ";
+  margin-left: 0;
+}
+/* line 25, ../sass/theme/_resources.scss */
+#epub #resources ul ul {
+  margin-left: 2em;
+}
+/* line 29, ../sass/theme/_resources.scss */
+#epub #resources .label {
+  font-size: 1.2375em;
+  background: none;
+  color: #3ba1cd;
+  text-align: left;
+  line-height: 1.6em;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
 }

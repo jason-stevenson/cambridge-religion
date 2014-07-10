@@ -3,14 +3,23 @@
 /* Define the colours to be used */
 // ================================================
 
-// Chapter Colours
-$chapter1-colour:#366628;
+// Chapter Cover Colours
+$section1-colour:#3ba1cd;
+$section2-colour:#db6738;
+$section3-colour:#b6d141;
+$section4-colour:#da2a6f;
 
-// Chapter Bg colours
-$chapter1-bgcolour:#b5cf41;
+// Chapter Titles
+$section1-bgcolour:#005476;
+$section2-bgcolour:#963e1a;
+$section3-bgcolour:#1a471e;
+$section4-bgcolour:#7d1d42;
 
-// Chapter Bg tint
-$chapter1-bgtint:#dde7a2;
+// Chapter tint
+$section1-bgtint:desaturate(lighten(#b0d2e0,10),15);
+$section2-bgtint:#dfc3b7;
+$section3-bgtint:#dde6a2;
+$section4-bgtint:#e7c4d2;
 
 
 // Common 
@@ -19,10 +28,8 @@ $red: #a2382f;
 $purple: #75386d;
 $heading-blue: #679fcd;
 
-
 $tooltip-color: $red;
 $tooltip-bg: #d8d8d3;
-
 $tooltip-font-weight: normal;
 $tooltip-font-color: #000;
 $tooltip-radius: 0;
@@ -34,6 +41,10 @@ $activity-panel:#fffacb;
 $task-panel:#dce7ef;
 $extra-panel:#e0e8dc;
 
+
+// Dialogue text
+$dialogue-colour:#376728;
+$psalm-colour:#273776;
 
 // Tables
 $activity-table-head:#e6be33;

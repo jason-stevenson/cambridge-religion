@@ -2,26 +2,43 @@
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
+$title-font: 'Oswald', sans-serif;
+
 
 /* Page elements */
 
 #epub{
 
+
+	$colors-list: $section1-bgcolour, $section2-bgcolour, $section3-bgcolour, $section4-bgcolour;
+	
+	@for $i from 1 through length($colors-list) {
+
+    .section#{$i} {
+    		h2{background-color:nth($colors-list, $i)};
+    		h3{color:nth($colors-list, $i)}
+		}
+	}
+
+	a{
+		color: $red;
+		&:hover{
+			color: darken($red,15);
+		}
+	}
 	h2,h3,h4{
-		font-family: 'Oswald', sans-serif;
+		font-family: $title-font;
 	}
 
 	h2{
-		background-color: $heading-blue;
 		color: #fff;
 		padding: 0 0.5em;
+		line-height: 1.6em;
 	}
 	h4{
-		font-weight: 400;
+		font-weight: 700;
 	}
-	h3{
-		color: $heading-blue;
-	}
+	
 	h5{
 		text-transform: uppercase;
 		font-weight: 400;
@@ -43,6 +60,94 @@
 		&:before{
 			content: "";
 		}
+	}
+
+	.table{
+		clear: both;
+		h4{color:$red;}
+	}
+	table{
+		tr{
+			th{
+				background-color:$red;
+				color: #fff;
+				border-bottom: 5px solid #d4bbb0;
+				text-align: center;
+				line-height: 1.3em;
+				font-size: 0.95em;
+			}
+			td{
+				background-color:#f8dac3;
+				border-right: 5px solid #d4bbb0;
+			}
+			td:last-child{
+				border:none;
+			}
+		}
+	}
+	sup,sub{
+		padding-right: 8px;
+	}
+
+	
+	.psalm{
+		color: $psalm-colour;
+		margin:1.9em 0;
+		h5{
+			text-transform: none;
+			color: $psalm-colour;
+			font-weight: bold;
+		}
+		ul{
+			list-style-type: none;
+			margin:0;
+		}
+		li{
+			padding-bottom: 0.8em;
+		}
+	}
+
+
+	.dialogue{
+		dt{
+			color: $dialogue-colour;
+		}
+		dd{
+			color: lighten($dialogue-colour,15);
+		}
+	}
+
+	.litany{
+		// margin:2em 0;
+		// h4{
+		// 	color: $red;
+		// 	font-weight: normal;
+		// }
+		// dl{
+		// 	font-size:0.8em;
+		// 	@media #{$small} {font-size:1em}
+		// 	dt{
+		// 		float: left;
+		// 		clear: left;
+		// 		width: 50%;
+		// 		font-weight: normal;
+		// 	}
+		// 	dd {clear:none}
+		// }
+		
+		// 	list-style-type: none;
+		// 	margin-left: 0;
+		// 	float: left;
+		// 	width: 50%;
+		// 	li:first-child{
+		// 		font-weight: bold;
+		// 	}
+		// }
+		// ul + ul{
+		// 	li{
+		// 		font-style: italic;;
+		// 	}
+		// }
 	}
 
 }

@@ -1,0 +1,41 @@
+
+#epub{
+	#resources{
+
+		h2{
+			background-color: #fff;
+			font-weight: 200;
+			padding: 0.6em 0;
+			color: $section1-colour;
+		}
+		
+		ul{
+
+			list-style-type: none;
+			margin: 0;
+			li{
+				margin: 0;
+			}
+			li:before {  
+	    		content: " "; 
+	    		margin-left: 0;
+	  		} 
+		}
+
+		ul ul{
+			margin-left: 2em;
+		}
+
+		.label{
+			font-size: $h5-font-size * 1.1;;
+			background:none;
+			color:$section1-colour;
+			text-align:left;
+			line-height: 1.6em;
+			font-family: $title-font;
+			font-weight: normal;
+
+		}
+		
+	}
+}

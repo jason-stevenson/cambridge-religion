@@ -10,12 +10,19 @@ $panel-padding: 1.5em;
 		@include panel(desaturate(lighten($interactive-panel,45),20), $panel-padding, false);
 		border:3px solid $interactive-panel;
 		h3{
-			color: $interactive-panel;
+			color: $interactive-panel !important;
 			span{
 				text-transform: uppercase;
 				font-weight: 200;
 			}
 		}
+	}
+	.interactive-panel.alternate{
+		clear: both;
+		//@include panel(desaturate(lighten($interactive-panel,45),20), $panel-padding, false);
+		border:none;
+		background-color: #fff;
+		padding:0;
 	}
 
 
@@ -26,7 +33,7 @@ $panel-padding: 1.5em;
 		border:none;
 
 		h3{
-			color: $red;
+			color: $red !important;
 			span{
 				text-transform: uppercase;
 				font-weight: 300;
@@ -35,6 +42,26 @@ $panel-padding: 1.5em;
 		ul,ol,p{
 			color:darken($task-panel, 50);
 		}
+
+		.info > p{
+			color: #000 !important;
+			margin:0;
+			padding-top: 1.4em;
+		}
+		.content{
+			clear: both;
+		}
+		.download{
+			@include grid-column(12);
+			@media #{$small} {	
+				@include grid-column(2);
+			}
+			a{
+				color: $heading-blue;
+				@include hover-colour($red)
+			}
+		}
+
 	}
 
 
@@ -47,7 +74,7 @@ $panel-padding: 1.5em;
 		@include panel($extra-panel, $panel-padding, false);
 		border:none;
 		h3{
-			color: $purple;
+			color: $purple !important;
 		}
 		ul,ol{
 			color:darken($extra-panel, 60);
@@ -64,7 +91,7 @@ $panel-padding: 1.5em;
 		border:none;
 
 		h3{
-			color: darken($heading-blue,20);
+			color: darken($heading-blue,20) !important;
 			span{
 				text-transform: uppercase;
 				font-weight: 300;

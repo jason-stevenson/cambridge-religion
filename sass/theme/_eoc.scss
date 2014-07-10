@@ -3,22 +3,22 @@
 #epub{
 	
 
-	$colors-list: $chapter1-colour;
-	$bg-colors-list: $chapter1-bgcolour;
-	$tint-colors-list: $chapter1-bgtint;
+	$colors-list: $section1-colour, $section2-colour, $section3-colour, $section4-colour;
+	$bg-colors-list: $section1-bgcolour, $section2-bgcolour, $section3-bgcolour, $section4-bgcolour;
+	$tint-colors-list: $section1-bgtint, $section2-bgtint, $section3-bgtint, $section4-bgtint;
 	
 	@for $i from 1 through length($colors-list) {
-    .eoc.chapter#{$i} {
+    .eoc.section#{$i} {
     	background-color:nth($tint-colors-list, $i);
-	    	h2{background-color:nth($colors-list, $i)}
-			h4,h6{color:nth($colors-list, $i)}
+	    	h2{background-color:nth($bg-colors-list, $i)}
+			h4,h6{color:nth($bg-colors-list, $i)}
 
-			h6{border-bottom:1px dotted nth($colors-list, $i);}
+			h6{border-bottom:1px dotted nth($bg-colors-list, $i);}
 			.activity{
-				border-top: 3px solid nth($colors-list, $i);
+				border-top: 3px solid nth($bg-colors-list, $i);
 			}
 			.content{
-				color: nth($colors-list, $i);
+				color: nth($bg-colors-list, $i);
 			}
 		}
 		
@@ -46,7 +46,8 @@
 			}
 			a{
 				color: $heading-blue;
-				@include hover-colour($red)
+				@include hover-colour($red);
+
 			}
 		}
 		.content{
