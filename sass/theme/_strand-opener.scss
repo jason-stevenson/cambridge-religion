@@ -31,9 +31,25 @@
 				@include coverBackground(1,$i);
 			}
 		}
+	}
+	@for $i from 1 through 12 {
 		#strand-opener.section2.chapter#{$i} {
 			.masthead{
-				@include coverBackground(2,$i);
+				@include coverBackground(1,$i);
+			}
+		}
+	}
+	@for $i from 1 through 12 {
+		#strand-opener.section3.chapter#{$i} {
+			.masthead{
+				@include coverBackground(1,$i);
+			}
+		}
+	}
+	@for $i from 1 through 12 {
+		#strand-opener.section4.chapter#{$i} {
+			.masthead{
+				@include coverBackground(1,$i);
 			}
 		}
 	}

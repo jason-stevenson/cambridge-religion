@@ -8132,48 +8132,90 @@ figure a:hover span {
 #epub .psalm {
   color: #273776;
   margin: 1.9em 0;
+  padding-left: 4em;
 }
-/* line 96, ../sass/theme/_page.scss */
+/* line 97, ../sass/theme/_page.scss */
 #epub .psalm h5 {
   text-transform: none;
   color: #273776;
   font-weight: bold;
+  margin: 0;
 }
-/* line 101, ../sass/theme/_page.scss */
+/* line 103, ../sass/theme/_page.scss */
+#epub .psalm h5 + h5 {
+  margin-bottom: 0.3em;
+}
+/* line 106, ../sass/theme/_page.scss */
 #epub .psalm ul {
   list-style-type: none;
   margin: 0;
 }
-/* line 105, ../sass/theme/_page.scss */
+/* line 110, ../sass/theme/_page.scss */
 #epub .psalm li {
   padding-bottom: 0.8em;
 }
-/* line 112, ../sass/theme/_page.scss */
+/* line 114, ../sass/theme/_page.scss */
+#epub .psalm ol {
+  counter-reset: li;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 119, ../sass/theme/_page.scss */
+#epub .psalm ol li {
+  position: relative;
+  margin: 0;
+  margin-left: 10px;
+  padding: 4px 8px;
+  list-style: none;
+}
+/* line 127, ../sass/theme/_page.scss */
+#epub .psalm ol > li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: 6px;
+  left: -10px;
+  padding: 0px;
+  font-size: 10px;
+}
+/* line 139, ../sass/theme/_page.scss */
+#epub .psalm ol ol {
+  border: none;
+}
+/* line 141, ../sass/theme/_page.scss */
+#epub .psalm ol ol li {
+  list-style-type: lower-alpha;
+}
+/* line 144, ../sass/theme/_page.scss */
+#epub .psalm ol ol li:before {
+  content: "";
+}
+/* line 153, ../sass/theme/_page.scss */
 #epub .dialogue dt {
   color: #376728;
 }
-/* line 115, ../sass/theme/_page.scss */
+/* line 156, ../sass/theme/_page.scss */
 #epub .dialogue dd {
   color: #549e3d;
 }
 
 /* Tooltips
 ================================================ */
-/* line 161, ../sass/theme/_page.scss */
+/* line 202, ../sass/theme/_page.scss */
 .has-tip {
   color: #a2382f;
   border: none;
 }
-/* line 164, ../sass/theme/_page.scss */
+/* line 205, ../sass/theme/_page.scss */
 .has-tip:hover {
   color: #2b0f0d;
 }
 
-/* line 168, ../sass/theme/_page.scss */
+/* line 209, ../sass/theme/_page.scss */
 .tooltip {
   padding: 1em;
 }
-/* line 170, ../sass/theme/_page.scss */
+/* line 211, ../sass/theme/_page.scss */
 .tooltip .nub {
   border-color: transparent transparent #b1b1a6 transparent;
 }
@@ -8384,27 +8426,27 @@ figure a:hover span {
 /* line 118, ../sass/theme/_panels.scss */
 #epub .activity-panel table {
   border: none;
-  /* Remove cell divider on last element */
+  clear: both;
   /* Row striping */
 }
-/* line 120, ../sass/theme/_panels.scss */
+/* line 121, ../sass/theme/_panels.scss */
 #epub .activity-panel table img {
   max-width: 80%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 120, ../sass/theme/_panels.scss */
+  /* line 121, ../sass/theme/_panels.scss */
   #epub .activity-panel table img {
     max-width: 50%;
   }
 }
-/* line 126, ../sass/theme/_panels.scss */
+/* line 127, ../sass/theme/_panels.scss */
 #epub .activity-panel table th {
   font-size: 95%;
   background-color: #e6be33;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
-/* line 132, ../sass/theme/_panels.scss */
+/* line 133, ../sass/theme/_panels.scss */
 #epub .activity-panel table td {
   background-color: #f5e1a4;
   border-right: 2px solid #fff;
@@ -8414,39 +8456,43 @@ figure a:hover span {
 #epub .activity-panel table tr > th:last-child,
 #epub .activity-panel table tr > td:last-child {
   border-right: none;
+  border-bottom: 2px solid #fff;
 }
-/* line 143, ../sass/theme/_panels.scss */
+/* line 144, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr:last-child td {
   border-bottom: none;
 }
-/* line 149, ../sass/theme/_panels.scss */
+/* line 150, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr:nth-of-type(even) td {
   background-color: #f8e9bb;
 }
-/* line 153, ../sass/theme/_panels.scss */
+/* line 154, ../sass/theme/_panels.scss */
 #epub .activity-panel table tr > td:first-child {
   text-align: center;
 }
-/* line 160, ../sass/theme/_panels.scss */
+/* line 161, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate {
   /* Row striping */
 }
-/* line 161, ../sass/theme/_panels.scss */
+/* line 162, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate td {
   background-color: #f8e9bb;
 }
-/* line 166, ../sass/theme/_panels.scss */
-#epub .activity-panel table.alternate tr:nth-of-type(odd) td {
+/* line 165, ../sass/theme/_panels.scss */
+#epub .activity-panel table.alternate td:first-child {
   background-color: #fff;
-  border-right: 2px solid #f8e9bb;
 }
-/* line 169, ../sass/theme/_panels.scss */
-#epub .activity-panel table.alternate tr:nth-of-type(odd) td:last-child {
-  border: none;
+/* line 170, ../sass/theme/_panels.scss */
+#epub .activity-panel table.alternate tr td:first-child {
+  border-bottom: 2px solid #f8e9bb;
 }
-/* line 174, ../sass/theme/_panels.scss */
+/* line 177, ../sass/theme/_panels.scss */
 #epub .activity-panel table.alternate tr > td:first-child {
   text-align: center;
+}
+/* line 181, ../sass/theme/_panels.scss */
+#epub .activity-panel table.alternate tr:last-child td {
+  border-bottom: none;
 }
 
 /* line 11, ../sass/theme/_eoc.scss */
@@ -8697,31 +8743,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter1 .cover-image {
-  background-image: url("../images/covers/section2/chapter1-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1.chapter2 .cover-image {
   background-image: url("../images/covers/section1/chapter2-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter2 .cover-image {
-  background-image: url("../images/covers/section2/chapter2-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -8741,31 +8765,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter3 .cover-image {
-  background-image: url("../images/covers/section2/chapter3-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1.chapter4 .cover-image {
   background-image: url("../images/covers/section1/chapter4-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter4 .cover-image {
-  background-image: url("../images/covers/section2/chapter4-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -8785,31 +8787,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter5 .cover-image {
-  background-image: url("../images/covers/section2/chapter5-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1.chapter6 .cover-image {
   background-image: url("../images/covers/section1/chapter6-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter6 .cover-image {
-  background-image: url("../images/covers/section2/chapter6-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -8829,31 +8809,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter7 .cover-image {
-  background-image: url("../images/covers/section2/chapter7-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1.chapter8 .cover-image {
   background-image: url("../images/covers/section1/chapter8-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter8 .cover-image {
-  background-image: url("../images/covers/section2/chapter8-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -8873,31 +8831,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter9 .cover-image {
-  background-image: url("../images/covers/section2/chapter9-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1.chapter10 .cover-image {
   background-image: url("../images/covers/section1/chapter10-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter10 .cover-image {
-  background-image: url("../images/covers/section2/chapter10-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -8917,17 +8853,6 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter11 .cover-image {
-  background-image: url("../images/covers/section2/chapter11-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1.chapter12 .cover-image {
   background-image: url("../images/covers/section1/chapter12-cover.jpg");
@@ -8939,9 +8864,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_chapter-opener.scss */
-#epub #chapter-opener.section2.chapter12 .cover-image {
-  background-image: url("../images/covers/section2/chapter12-cover.jpg");
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter1 .cover-image {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -8950,39 +8875,424 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 49, ../sass/theme/_chapter-opener.scss */
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter2 .cover-image {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter3 .cover-image {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter4 .cover-image {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter5 .cover-image {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter6 .cover-image {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter7 .cover-image {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter8 .cover-image {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter9 .cover-image {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter10 .cover-image {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter11 .cover-image {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section2.chapter12 .cover-image {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter1 .cover-image {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter2 .cover-image {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter3 .cover-image {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter4 .cover-image {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter5 .cover-image {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter6 .cover-image {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter7 .cover-image {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter8 .cover-image {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter9 .cover-image {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter10 .cover-image {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter11 .cover-image {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section3.chapter12 .cover-image {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter1 .cover-image {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter2 .cover-image {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter3 .cover-image {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter4 .cover-image {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter5 .cover-image {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter6 .cover-image {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter7 .cover-image {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter8 .cover-image {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter9 .cover-image {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter10 .cover-image {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter11 .cover-image {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_chapter-opener.scss */
+#epub #chapter-opener.section4.chapter12 .cover-image {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 65, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1 {
   background-color: #3ba1cd;
 }
-/* line 51, ../sass/theme/_chapter-opener.scss */
+/* line 67, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section1 .chapter-title {
   color: #005476;
 }
-/* line 49, ../sass/theme/_chapter-opener.scss */
+/* line 65, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section2 {
   background-color: #db6738;
 }
-/* line 51, ../sass/theme/_chapter-opener.scss */
+/* line 67, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section2 .chapter-title {
   color: #963e1a;
 }
-/* line 49, ../sass/theme/_chapter-opener.scss */
+/* line 65, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section3 {
   background-color: #b6d141;
 }
-/* line 51, ../sass/theme/_chapter-opener.scss */
+/* line 67, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section3 .chapter-title {
   color: #1a471e;
 }
-/* line 49, ../sass/theme/_chapter-opener.scss */
+/* line 65, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section4 {
   background-color: #da2a6f;
 }
-/* line 51, ../sass/theme/_chapter-opener.scss */
+/* line 67, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener.section4 .chapter-title {
   color: #7d1d42;
 }
-/* line 58, ../sass/theme/_chapter-opener.scss */
+/* line 74, ../sass/theme/_chapter-opener.scss */
 #epub #chapter-opener .masthead {
   width: 100%;
   margin-left: auto;
@@ -8998,7 +9308,7 @@ figure a:hover span {
   display: table;
   clear: both;
 }
-/* line 65, ../sass/theme/_chapter-opener.scss */
+/* line 81, ../sass/theme/_chapter-opener.scss */
 #epub .chapter-number {
   position: relative;
   padding-left: 0.9375em;
@@ -9015,12 +9325,12 @@ figure a:hover span {
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 65, ../sass/theme/_chapter-opener.scss */
+  /* line 81, ../sass/theme/_chapter-opener.scss */
   #epub .chapter-number {
     font-size: 4.95em;
   }
 }
-/* line 80, ../sass/theme/_chapter-opener.scss */
+/* line 96, ../sass/theme/_chapter-opener.scss */
 #epub .chapter-title {
   position: relative;
   padding-left: 0.9375em;
@@ -9034,7 +9344,7 @@ figure a:hover span {
   font-weight: bold;
 }
 @media only screen and (min-width: 768px) {
-  /* line 80, ../sass/theme/_chapter-opener.scss */
+  /* line 96, ../sass/theme/_chapter-opener.scss */
   #epub .chapter-title {
     font-size: 2.3125em;
   }
@@ -9064,31 +9374,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter1 .masthead {
-  background-image: url("../images/covers/section2/chapter1-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1.chapter2 .masthead {
   background-image: url("../images/covers/section1/chapter2-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter2 .masthead {
-  background-image: url("../images/covers/section2/chapter2-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -9108,31 +9396,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter3 .masthead {
-  background-image: url("../images/covers/section2/chapter3-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1.chapter4 .masthead {
   background-image: url("../images/covers/section1/chapter4-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter4 .masthead {
-  background-image: url("../images/covers/section2/chapter4-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -9152,31 +9418,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter5 .masthead {
-  background-image: url("../images/covers/section2/chapter5-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1.chapter6 .masthead {
   background-image: url("../images/covers/section1/chapter6-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter6 .masthead {
-  background-image: url("../images/covers/section2/chapter6-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -9196,31 +9440,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter7 .masthead {
-  background-image: url("../images/covers/section2/chapter7-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1.chapter8 .masthead {
   background-image: url("../images/covers/section1/chapter8-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter8 .masthead {
-  background-image: url("../images/covers/section2/chapter8-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -9240,31 +9462,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter9 .masthead {
-  background-image: url("../images/covers/section2/chapter9-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1.chapter10 .masthead {
   background-image: url("../images/covers/section1/chapter10-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter10 .masthead {
-  background-image: url("../images/covers/section2/chapter10-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -9284,17 +9484,6 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter11 .masthead {
-  background-image: url("../images/covers/section2/chapter11-cover.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* line 30, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1.chapter12 .masthead {
   background-image: url("../images/covers/section1/chapter12-cover.jpg");
@@ -9306,9 +9495,9 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 35, ../sass/theme/_strand-opener.scss */
-#epub #strand-opener.section2.chapter12 .masthead {
-  background-image: url("../images/covers/section2/chapter12-cover.jpg");
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter1 .masthead {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
@@ -9317,51 +9506,436 @@ figure a:hover span {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 49, ../sass/theme/_strand-opener.scss */
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter2 .masthead {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter3 .masthead {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter4 .masthead {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter5 .masthead {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter6 .masthead {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter7 .masthead {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter8 .masthead {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter9 .masthead {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter10 .masthead {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter11 .masthead {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 37, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section2.chapter12 .masthead {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter1 .masthead {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter2 .masthead {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter3 .masthead {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter4 .masthead {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter5 .masthead {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter6 .masthead {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter7 .masthead {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter8 .masthead {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter9 .masthead {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter10 .masthead {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter11 .masthead {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 44, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section3.chapter12 .masthead {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter1 .masthead {
+  background-image: url("../images/covers/section1/chapter1-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter2 .masthead {
+  background-image: url("../images/covers/section1/chapter2-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter3 .masthead {
+  background-image: url("../images/covers/section1/chapter3-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter4 .masthead {
+  background-image: url("../images/covers/section1/chapter4-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter5 .masthead {
+  background-image: url("../images/covers/section1/chapter5-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter6 .masthead {
+  background-image: url("../images/covers/section1/chapter6-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter7 .masthead {
+  background-image: url("../images/covers/section1/chapter7-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter8 .masthead {
+  background-image: url("../images/covers/section1/chapter8-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter9 .masthead {
+  background-image: url("../images/covers/section1/chapter9-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter10 .masthead {
+  background-image: url("../images/covers/section1/chapter10-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter11 .masthead {
+  background-image: url("../images/covers/section1/chapter11-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 51, ../sass/theme/_strand-opener.scss */
+#epub #strand-opener.section4.chapter12 .masthead {
+  background-image: url("../images/covers/section1/chapter12-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 65, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1 {
   background-color: #3ba1cd;
 }
-/* line 51, ../sass/theme/_strand-opener.scss */
+/* line 67, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section1 .strand-title {
   color: #005476;
 }
-/* line 49, ../sass/theme/_strand-opener.scss */
+/* line 65, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section2 {
   background-color: #db6738;
 }
-/* line 51, ../sass/theme/_strand-opener.scss */
+/* line 67, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section2 .strand-title {
   color: #963e1a;
 }
-/* line 49, ../sass/theme/_strand-opener.scss */
+/* line 65, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section3 {
   background-color: #b6d141;
 }
-/* line 51, ../sass/theme/_strand-opener.scss */
+/* line 67, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section3 .strand-title {
   color: #1a471e;
 }
-/* line 49, ../sass/theme/_strand-opener.scss */
+/* line 65, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section4 {
   background-color: #da2a6f;
 }
-/* line 51, ../sass/theme/_strand-opener.scss */
+/* line 67, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener.section4 .strand-title {
   color: #7d1d42;
 }
-/* line 58, ../sass/theme/_strand-opener.scss */
+/* line 74, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener .masthead {
   padding: 1.2em 0;
   min-height: 200px;
   margin-bottom: 2em;
 }
 @media only screen and (min-width: 768px) {
-  /* line 58, ../sass/theme/_strand-opener.scss */
+  /* line 74, ../sass/theme/_strand-opener.scss */
   #epub #strand-opener .masthead {
     min-height: 300px;
   }
 }
-/* line 66, ../sass/theme/_strand-opener.scss */
+/* line 82, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener .content {
   width: 100%;
   margin-left: auto;
@@ -9377,19 +9951,19 @@ figure a:hover span {
   display: table;
   clear: both;
 }
-/* line 70, ../sass/theme/_strand-opener.scss */
+/* line 86, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener .content ul {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 74, ../sass/theme/_strand-opener.scss */
+/* line 90, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener .content ul li {
   position: relative;
   margin: 0 0 2px 2em;
   padding: 4px 8px;
   list-style: none;
 }
-/* line 81, ../sass/theme/_strand-opener.scss */
+/* line 97, ../sass/theme/_strand-opener.scss */
 #epub #strand-opener .content ul > li:before {
   content: counter(li);
   /* Use the counter as content */
@@ -9414,7 +9988,7 @@ figure a:hover span {
   -webkit-border-radius: 30px;
   text-align: center;
 }
-/* line 106, ../sass/theme/_strand-opener.scss */
+/* line 122, ../sass/theme/_strand-opener.scss */
 #epub .strand-number {
   position: relative;
   padding-left: 0.9375em;
@@ -9431,12 +10005,12 @@ figure a:hover span {
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 106, ../sass/theme/_strand-opener.scss */
+  /* line 122, ../sass/theme/_strand-opener.scss */
   #epub .strand-number {
     font-size: 7.15em;
   }
 }
-/* line 121, ../sass/theme/_strand-opener.scss */
+/* line 137, ../sass/theme/_strand-opener.scss */
 #epub .strand-title {
   font-size: 2.75em;
   padding: 0;
@@ -9445,7 +10019,7 @@ figure a:hover span {
   margin: 0.4em 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 121, ../sass/theme/_strand-opener.scss */
+  /* line 137, ../sass/theme/_strand-opener.scss */
   #epub .strand-title {
     font-size: 2.75em;
   }

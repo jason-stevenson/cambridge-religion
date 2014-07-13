@@ -117,6 +117,7 @@ $panel-padding: 1.5em;
 
 		table{
 			border:none;
+			clear: both;
 			img{
 				max-width: 80%;
 				@media #{$small} {
@@ -135,10 +136,10 @@ $panel-padding: 1.5em;
 				border-bottom:2px solid #fff;
 			}
 
-			/* Remove cell divider on last element */
 			tr > th:last-child,
 			tr > td:last-child,{
 				border-right:none;
+				border-bottom:2px solid #fff;
 			}
 			tr:last-child td{
 				border-bottom:none;
@@ -161,18 +162,25 @@ $panel-padding: 1.5em;
 			td{
 				background-color: lighten($activity-table-cell,5); 
 			}
+			td:first-child{
+				background-color: #fff; 
+			}
 			/* Row striping */
-			tr:nth-of-type(odd){
-				td{
-					background-color: #fff; 
-					border-right:2px solid lighten($activity-table-cell,5);
+			tr{
+				td:first-child{
+					border-bottom:2px solid lighten($activity-table-cell,5);
 					&:last-child{
-						border:none;
+						//border:none;
 					}
 				}
 			}
 			tr > td:first-child{
 				text-align: center;
+			}
+			tr:last-child{
+				td{
+					border-bottom: none;
+				}
 			}
 		}
 	}

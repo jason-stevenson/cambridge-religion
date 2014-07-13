@@ -31,9 +31,25 @@
 				@include coverBackground(1,$i);
 			}
 		}
+	}
+	@for $i from 1 through 12 {
 		#chapter-opener.section2.chapter#{$i} {
 			.cover-image{
-				@include coverBackground(2,$i);
+				@include coverBackground(1,$i);
+			}
+		}
+	}
+	@for $i from 1 through 12 {
+		#chapter-opener.section3.chapter#{$i} {
+			.cover-image{
+				@include coverBackground(1,$i);
+			}
+		}
+	}
+	@for $i from 1 through 12 {
+		#chapter-opener.section4.chapter#{$i} {
+			.cover-image{
+				@include coverBackground(1,$i);
 			}
 		}
 	}
