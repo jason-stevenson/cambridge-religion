@@ -35,6 +35,10 @@ module.exports = function(grunt) {
         }
       },
 
+
+
+
+      // Delete alll files from the build directory
       clean: {
         build: {
           src: ['build']
@@ -42,7 +46,9 @@ module.exports = function(grunt) {
       },
 
 
-      //Concat JS files
+
+
+      // Concatenate javascript files
       concat: {
         dist: {
           files: {
@@ -50,6 +56,9 @@ module.exports = function(grunt) {
           },
         }
       },
+
+
+
 
 
       // Minifiy CSS
@@ -104,6 +113,9 @@ module.exports = function(grunt) {
         }
       },
 
+
+
+
       // Copy files to the build folder ready for upload
       copy: {
         main: {
@@ -116,6 +128,28 @@ module.exports = function(grunt) {
           dest: 'build/',
         },
       },
+
+
+
+
+      // Remove the livereload script + switch in the minified javsacript
+      replace: {
+        example: {
+          src: ['build/*.html'],            
+          dest: 'build/',           
+          replacements: [{
+            from: '<script src="http://localhost:35729/livereload.js"></script>',      
+            to: ''
+          }, {
+            from: '<script src="javascripts/cambridge/custom.js"></script>',            
+            to: ''
+          } , {
+            from: '<script src="javascripts/cambridge/core.js"></script>',            
+            to: '<script src="javascripts/cambridge/cambridge.js"></script>'
+          }]
+        }
+      },
+
 
 
 
@@ -147,15 +181,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
-
+  grunt.loadNpmTasks('grunt-text-replace');
 
 
    // Deploy task
   grunt.registerTask('deploy', [
-      'clean', 'cssmin', 'concat', 'uglify', 'imagemin', 'copy'
+      'clean', 'cssmin', 'concat', 'uglify', 'imagemin', 'copy', 'replace'
    ]);
 
-  
 
   // Default task
     grunt.registerTask('default', [
